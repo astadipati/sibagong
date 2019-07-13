@@ -7,8 +7,9 @@
 <!--<![endif]-->
 
 <head>
-    <title>Clip-One - Responsive Admin Template</title>
-    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Pengadilan Tinggi Agama Surabaya</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+    <link rel="icon" href="<?php echo base_url('static/assets/images/icons/icon_pa.ico');?>" type="image/gif">
     <!-- start: META -->
     <meta charset="utf-8" />
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
