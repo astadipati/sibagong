@@ -32,22 +32,22 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="close-sidebar-left">
+                                <a href="<?php echo base_url()?>hal/hakim_pta">
                                     <span class="title"> Hakim Pengadilan Tinggi </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="set-boxed-layout">
+                                <a href="<?php echo base_url()?>hal/hakim_pa">
                                     <span class="title"> Hakim Pengadilan Agama </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="set-footer-fixed">
+                                <a href="<?php echo base_url()?>hal/pp_pta">
                                     <span class="title"> PP Pengadilan Tinggi </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../clip-one-rtl/index.html">
+                                <a href="<?php echo base_url()?>hal/pp_pa">
                                     <span class="title"> PP Pengadilan Agama </span>
                                 </a>
                             </li>
@@ -68,12 +68,12 @@
                         <ul class="sub-menu">
                             <li>
                                 <a href="ui_elements.html">
-                                    <span class="title"> RK 2 </span>
+                                    <span class="title"> RK 1 </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="ui_animations.html">
-                                    <span class="title"> RK 3 </span>
+                                    <span class="title"> RK 2 </span>
                                     <span class="badge badge-new">new</span>
                                 </a>
                             </li>

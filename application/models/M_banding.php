@@ -41,13 +41,13 @@ class M_banding extends CI_Model{
     }
 
 	function tampil_hakim_pa(){
-        $query = $this->db->query("SELECT * FROM `hakim_pn`  
+        $query = $this->db->query("SELECT * FROM `hakim_pn` where aktif = 'Y'
         ORDER BY `hakim_pn`.`id`  DESC ");
         return $query; 
     } 
 
     function tampil_hakim_pa_paging($halaman, $offset){
-        return $this->db->query("SELECT * FROM `hakim_pn`  
+        return $this->db->query("SELECT * FROM `hakim_pn` where aktif = 'Y' 
         ORDER BY `hakim_pn`.`id`  DESC limit $halaman, $offset");
     }
 
@@ -64,13 +64,13 @@ class M_banding extends CI_Model{
     }
 
 	function tampil_pp_pa(){
-        $query = $this->db->query("SELECT * FROM `panitera_pn`  
+        $query = $this->db->query("SELECT * FROM `panitera_pn` where aktif = 'Y'
         ORDER BY `panitera_pn`.`id`  DESC ");
         return $query; 
     } 
 
     function tampil_pp_pa_paging($halaman, $offset){
-        return $this->db->query("SELECT * FROM `panitera_pn`  
+        return $this->db->query("SELECT * FROM `panitera_pn` where aktif = 'Y'
         ORDER BY `panitera_pn`.`id`  DESC limit $halaman, $offset");
     } 
 

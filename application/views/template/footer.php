@@ -3,7 +3,7 @@
         <div class="footer-inner">
             <script>
                 document.write(new Date().getFullYear())
-            </script> &copy; clip-one by cliptheme.
+            </script> &copy; TIM IT PTA SURABAYA.
         </div>
         <div class="footer-items">
             <span class="go-top"><i class="clip-chevron-up"></i></span>

@@ -62,10 +62,10 @@ class Hal extends CI_Controller{
     }
   }
  
-  function hakim(){
+  function hakim_pta(){
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->library('pagination');
-      $config['base_url'] = base_url().'/hal/hakim/';
+      $config['base_url'] = base_url().'/hal/hakim_pta/';
       $config['total_rows'] = $this->M_banding->tampil_hakim()->num_rows(); 
       $data['total'] = $this->M_banding->tampil_hakim()->num_rows(); 
       $config['per_page'] = 10;
@@ -76,7 +76,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_hakim_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('konten/v_hakim', $data);
+      $this->load->view('konten/v_hakim_pta', $data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -103,10 +103,10 @@ class Hal extends CI_Controller{
       echo "Restricted";
     }
   }
-  function panitera(){
+  function pp_pta(){
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->library('pagination');
-      $config['base_url'] = base_url().'/hal/panitera/';
+      $config['base_url'] = base_url().'/hal/pp_pta/';
       $config['total_rows'] = $this->M_banding->tampil_pp()->num_rows(); 
       $data['total'] = $this->M_banding->tampil_pp()->num_rows(); 
       $config['per_page'] = 10;
@@ -117,16 +117,16 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_pp_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('konten/v_panitera', $data);
+      $this->load->view('konten/v_pp_pta', $data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
     }
   }
-  function panitera_pa(){
+  function pp_pa(){
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->library('pagination');
-      $config['base_url'] = base_url().'/hal/panitera_pa/';
+      $config['base_url'] = base_url().'/hal/pp_pa/';
       $config['total_rows'] = $this->M_banding->tampil_pp_pa()->num_rows(); 
       $data['total'] = $this->M_banding->tampil_pp_pa()->num_rows(); 
       $config['per_page'] = 10;
@@ -137,7 +137,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_pp_pa_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('konten/v_panitera_pa', $data);
+      $this->load->view('konten/v_pp_pa', $data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";

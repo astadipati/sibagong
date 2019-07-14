@@ -311,7 +311,7 @@
                                                         <img alt="" src="./assets/images/avatar-1.jpg">
                                                     </div>
                                                     <div class="thread-content">
-                                                        <span class="author">Peter Clark</span>
+                                                        <span class="author"><?php echo $this->session->userdata('ses_uname');?></span>
                                                         <span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
                                                         <span class="time">2 mins</span>
                                                     </div>
@@ -339,7 +339,7 @@
                                                         <img alt="" src="./assets/images/avatar-1.jpg">
                                                     </div>
                                                     <div class="thread-content">
-                                                        <span class="author">Peter Clark</span>
+                                                        <span class="author"><?php echo $this->session->userdata('ses_uname');?></span>
                                                         <span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
                                                         <span class="time">9 hrs</span>
                                                     </div>
@@ -375,7 +375,7 @@
                     <li class="dropdown current-user">
                         <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
                             <img src="<?php echo base_url()?>static/assets/images/avatar-1-small.jpg" class="circle-img" alt="">
-                            <span class="username">Peter Clark</span>
+                            <span class="username"><?php echo $this->session->userdata('ses_uname');?></span>
                             <i class="clip-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
