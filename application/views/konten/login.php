@@ -44,7 +44,7 @@
     <div class="main-login col-sm-4 col-sm-offset-4">
         <div class="logo">
             <!-- CLIP<i class="clip-clip"></i>ONE -->
-            SIBAGONG
+            PENGADILAN TINGGI AGAMA SURABAYA
         </div>
         <!-- start: LOGIN BOX -->
         <div class="box-login">
@@ -52,20 +52,20 @@
             <p>
                 Please enter your name and password to log in.
             </p>
-            <form class="form-login" action="index.html">
+            <form class="form-login" action="<?php echo base_url().'login/auth'?>" method="post">
                 <div class="errorHandler alert alert-danger no-display">
                     <i class="fa fa-remove-sign"></i> You have some form errors. Please check below.
                 </div>
                 <fieldset>
                     <div class="form-group">
                         <span class="input-icon">
-                            <input type="text" class="form-control" name="username" placeholder="Username">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                             <i class="fa fa-user"></i>
                         </span>
                     </div>
                     <div class="form-group form-actions">
                         <span class="input-icon">
-                            <input type="password" class="form-control password" name="password" placeholder="Password">
+                            <input type="password" id="password" class="form-control password" name="password" placeholder="Password">
                             <i class="fa fa-lock"></i>
                             <a class="forgot" href="#">
                                 I forgot my password
