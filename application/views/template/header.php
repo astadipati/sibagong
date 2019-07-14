@@ -53,7 +53,8 @@
                 <!-- end: RESPONSIVE MENU TOGGLER -->
                 <!-- start: LOGO -->
                 <a class="navbar-brand" href="index.html">
-                CLIP<i class="clip-clip"></i>ONE
+                PENGADILAN AGAMA TUBAN
+                <!-- <?php echo $this->session->userdata('ses_uname');?> -->
             </a>
                 <!-- end: LOGO -->
             </div>

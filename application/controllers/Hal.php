@@ -34,7 +34,7 @@ class Hal extends CI_Controller{
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_user_profile');
+      $this->load->view('konten/v_user_profile');
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -55,7 +55,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_perkara_banding_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_perkara_banding',$data);
+      $this->load->view('konten/v_perkara_banding',$data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -76,7 +76,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_hakim_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_hakim', $data);
+      $this->load->view('konten/v_hakim', $data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -97,7 +97,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_hakim_pa_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_hakim_pa', $data);
+      $this->load->view('konten/v_hakim_pa', $data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -117,7 +117,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_pp_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_panitera', $data);
+      $this->load->view('konten/v_panitera', $data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -137,7 +137,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_pp_pa_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_panitera_pa', $data);
+      $this->load->view('konten/v_panitera_pa', $data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -147,7 +147,7 @@ class Hal extends CI_Controller{
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_laporan');
+      $this->load->view('konten/v_laporan');
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -157,7 +157,7 @@ class Hal extends CI_Controller{
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_notifikasi');
+      $this->load->view('konten/v_notifikasi');
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -167,7 +167,7 @@ class Hal extends CI_Controller{
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_support');
+      $this->load->view('konten/v_support');
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -177,7 +177,7 @@ class Hal extends CI_Controller{
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_data_pa');
+      $this->load->view('konten/v_data_pa');
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -187,7 +187,7 @@ class Hal extends CI_Controller{
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_para_pihak');
+      $this->load->view('konten/v_para_pihak');
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -208,7 +208,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_banding_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('kontent/v_data_banding', $data);
+      $this->load->view('konten/v_data_banding', $data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -225,7 +225,7 @@ class Hal extends CI_Controller{
       }else{
         $this->load->view('template/header');
         $this->load->view('template/sidebar');
-        $this->load->view('kontent/v_data_banding_add');
+        $this->load->view('konten/v_data_banding_add');
         $this->load->view('template/footer');
       }
     }else{
@@ -278,7 +278,7 @@ class Hal extends CI_Controller{
             $data['data'] = $this->db->get_where('perkara',array ('perkara_id'=>$res))->row_array();
             $this->load->view('template/header');
             $this->load->view('template/sidebar');
-            $this->load->view('kontent/v_data_banding_edit', $data);
+            $this->load->view('konten/v_data_banding_edit', $data);
             $this->load->view('template/footer');
           }
       
@@ -331,7 +331,7 @@ class Hal extends CI_Controller{
             $data['data'] = $this->db->get_where('perkara_banding',array ('perkara_id'=>$res))->row_array();
             $this->load->view('template/header');
             $this->load->view('template/sidebar');
-            $this->load->view('kontent/v_perkara_banding_edit', $data);
+            $this->load->view('konten/v_perkara_banding_edit', $data);
             $this->load->view('template/footer');
           }
       
