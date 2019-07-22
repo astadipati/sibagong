@@ -18,14 +18,14 @@ class M_banding extends CI_Model{
     
     // perkara banding
     function tampil_perkara_banding(){
-        $query = $this->db->query("SELECT * FROM `perkara_banding`  
-        ORDER BY `perkara_banding`.`perkara_id`  DESC ");
+        $query = $this->db->query("SELECT * FROM perkara_banding ORDER BY
+        permohonan_banding desc ");
         return $query; 
     } 
 
     function tampil_perkara_banding_paging($halaman, $offset){
-        return $this->db->query("SELECT * FROM `perkara_banding`  
-        ORDER BY `perkara_banding`.`perkara_id`  DESC limit $halaman, $offset");
+        return $this->db->query("SELECT * FROM perkara_banding ORDER BY
+        permohonan_banding desc limit $halaman, $offset");
     } 
 
     // buat data hakim

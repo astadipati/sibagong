@@ -41,10 +41,10 @@ class Hal extends CI_Controller{
     }
   }
 
-  function perkara_banding(){
+  function data_banding(){
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->library('pagination');
-      $config['base_url'] = base_url().'/hal/perkara_banding/';
+      $config['base_url'] = base_url().'/hal/data_banding/';
       $config['total_rows'] = $this->M_banding->tampil_perkara_banding()->num_rows(); 
       $data['total'] = $this->M_banding->tampil_perkara_banding()->num_rows(); 
       $config['per_page'] = 10;
@@ -55,7 +55,7 @@ class Hal extends CI_Controller{
       $data ['data']  = $this->M_banding->tampil_perkara_banding_paging($halaman,  $config['per_page']);
       $this->load->view('template/header');
 		  $this->load->view('template/sidebar');
-      $this->load->view('konten/v_perkara_banding',$data);
+      $this->load->view('konten/v_data_banding',$data);
       $this->load->view('template/footer');
     }else{
       echo "Restricted";
@@ -153,12 +153,44 @@ class Hal extends CI_Controller{
       echo "Restricted";
     }
   }
-  function notifikasi(){
+  function notif(){
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
-      $this->load->view('template/header');
-		  $this->load->view('template/sidebar');
-      $this->load->view('konten/v_notifikasi');
-      $this->load->view('template/footer');
+      // Konfigurasi email
+    //   $config = [
+    //     'mailtype'  => 'html',
+    //     'charset'   => 'utf-8',
+    //     'protocol'  => 'smtp',
+    //     'smtp_host' => 'ssl://smtp.gmail.com',
+    //     'smtp_user' => 'asekbos@gmail.com',   
+    //     'smtp_pass' => 'Kul0nuwun-bos',      
+    //     'smtp_port' => 465,
+    //     'crlf'      => "\r\n",
+    //     'newline'   => "\r\n"
+    // ];
+
+    //   // Load library email dan konfigurasinya
+    //   $this->load->library('email', $config);
+
+    //   // Email dan nama pengirim
+    //   $this->email->from('no-reply@cakcoder.id', 'cakcoder.id | Ramastudio');
+
+    //   // Email penerima
+    //   $this->email->to('pa_tbn@yahoo.co.id'); // Ganti dengan email tujuan kamu
+
+    //   // Lampiran email, isi dengan url/path file
+    //   $this->email->attach('http://new.pa-tuban.go.id/arsip/images/IMG_20190611_WA0018.jpg');
+
+    //   // Subject email
+    //   $this->email->subject('Notifikasi Perkara Banding | cakcoder.id');
+
+    //   // Isi email
+    //   $this->email->message("No-reply notifikasi via email dengan aplikasi Banding <br><br> Klik <strong><a href='http://new.pa-tuban.go.id' target='_blank' rel='noopener'>disini</a></strong> notifikasi sukses !!.");
+
+    
+      // $this->load->view('template/header');
+		  // $this->load->view('template/sidebar');
+      $this->load->view('konten/v_notif');
+      // $this->load->view('template/footer');
     }else{
       echo "Restricted";
     }
@@ -194,7 +226,7 @@ class Hal extends CI_Controller{
     }
   }
   // data banding
-  function data_banding(){
+  function data_banding2(){
     if($this->session->userdata('akses')=='1' || $this->session->userdata('akses')=='2'){
       $this->load->library('pagination');
       $config['base_url'] = base_url().'/hal/data_banding/';

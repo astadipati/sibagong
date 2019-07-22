@@ -54,7 +54,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="<?php echo base_url()?>hal/data_banding">
                             <i class="clip-cursor"></i>
                             <span class="title"> Data Banding </span><span class="selected"></span>
                         </a>
@@ -85,7 +85,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="maps.html">
+                        <a href="<?php echo base_url()?>kirim_email" target="_blank">
                             <i class="clip-location"></i>
                             <span class="title">Notifikasi</span>
                             <span class="selected"></span>
