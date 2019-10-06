@@ -22,8 +22,8 @@ class Sendmail extends CI_Controller {
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
             'smtp_port' => 465,
-            'smtp_user' => 'asekbos@gmail.com', // change it to yours
-            'smtp_pass' => 'Kul0nuwun-bos', // change it to yours
+            'smtp_user' => 'sss@gmail.com', // change it to yours
+            'smtp_pass' => 'sss', // change it to yours
             'mailtype' => 'html',
             'charset' => 'iso-8859-1',
             'wordwrap' => TRUE
@@ -33,7 +33,7 @@ class Sendmail extends CI_Controller {
                 $this->load->library('email', $config);
                 $this->email->set_newline("\r\n");
                 $this->email->from('no-reply@gmail.com'); // change it to yours
-                $this->email->to('astadipati@outlook.com');// change it to yours
+                $this->email->to('xxx@outlook.com');// change it to yours
                 $this->email->subject('Resume from JobsBuddy for your Job posting');
                 $this->email->message($message);
                 if($this->email->send())

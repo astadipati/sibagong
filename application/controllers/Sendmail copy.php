@@ -16,15 +16,15 @@ class Sendmail extends CI_Controller {
         // }
         // endforeach();
         // foreach ()
-        $e = "astadipati@outlook.com";
+        $e = "xxx@outlook.com";
         // Konfigurasi email
         $config = [
             'mailtype'  => 'html',
             'charset'   => 'utf-8',
             'protocol'  => 'smtp',
             'smtp_host' => 'ssl://smtp.gmail.com',
-            'smtp_user' => 'asekbos@gmail.com',    // Ganti dengan email gmail kamu
-            'smtp_pass' => 'Kul0nuwun-bos',      // Password gmail kamu
+            'smtp_user' => 'xxx@gmail.com',    // Ganti dengan email gmail kamu
+            'smtp_pass' => 'xxx',      // Password gmail kamu
             'smtp_port' => 465,
             'crlf'      => "\r\n",
             'newline'   => "\r\n"
@@ -36,12 +36,6 @@ class Sendmail extends CI_Controller {
         // Email dan nama pengirim
         $this->email->from('no-reply@cakcoder.com', 'Data Update');
         
-        // $d = $this->db->query("select a.post_title , a.post_description, a.email, a.post_status,b.post_status from tbl_post a
-        // left join tbl_antri b on a.post_title = b.post_title
-        // where b.post_status =1 limit 1");
-        // foreach ($d->result_array() as $mahasiswa) {
-        //      echo "Nama : ".$mahasiswa['post_title']."<br/>";
-        //      echo "Alamat : ".$mahasiswa['email']."<hr/>";
         // }
         // Email penerima
         $this->email->to($e); // Ganti dengan email tujuan kamu
